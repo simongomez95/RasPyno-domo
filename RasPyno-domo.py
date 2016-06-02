@@ -41,10 +41,10 @@ app.jinja_env.globals.update(toggle_light=toggle_light)
 @app.route('/')
 def home():
 
-    estadoLuz = True
+    estadoLuz = ard.digitalRead(led)
     time = datetime.datetime.now()
     timeStr = time.strftime("%Y-%m-%d %H:%M")
-    if estadoLuz==True:
+    if estadoLuz:
         estadoLuz='ON'
     else:
         estadoLuz='OFF'
