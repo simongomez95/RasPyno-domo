@@ -26,7 +26,11 @@ except:
 
 def toggle_light():
     try:
-        ard.digitalWrite(led)
+        if ard.digitalRead(led):
+            ard.digitalWrite(led, 0)
+        else:
+            ard.digitalWrite(led, 1)
+
     except:
         print("Failed to turn light on")
     return "Luz"
