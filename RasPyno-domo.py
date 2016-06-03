@@ -94,4 +94,4 @@ app.jinja_env.globals.update(toggle_light=toggle_light)
 #        return render_template('main.html', **templateData)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host = '0.0.0.0', port = 80, debug = True)
