@@ -20,8 +20,9 @@ try:
     ard.pinMode(led, ard.OUTPUT)
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
-    temp = ard.analogRead(sensor)/9.31
-    print(temp)
+    while True:
+        temp = ard.analogRead(sensor) / 9.31
+        print(temp)
 except:
     print("Failed To Connect to Arduino")
 
