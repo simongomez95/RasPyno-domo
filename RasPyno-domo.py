@@ -21,7 +21,7 @@ try:
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
 
-    temp = (5.0 * ard.analogRead(sensor) * 100.0) / 1024
+    temp = ard.analogRead(sensor)/9.31
     print(temp)
 except:
     print("Failed To Connect to Arduino")
