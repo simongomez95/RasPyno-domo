@@ -20,13 +20,8 @@ try:
     ard.pinMode(led, ard.OUTPUT)
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
-    while True:
-        temp = ard.analogRead(sensor)
-        sleep(0.5)
-        print((5.0 * temp * 100.0) / 1024)
 except:
     print("Failed To Connect to Arduino")
-
 
 
 @app.route('/')
@@ -34,17 +29,20 @@ def home():
 
     try:
         estadoLuz = ard.digitalRead(led)
+        temp = ard.analogRead(sensor)
     except:
         estadoLuz = "Debugging"
+        temp=69
         print("derp")
     time = datetime.datetime.now()
     timeStr = time.strftime("%Y-%m-%d %H:%M")
+    temp = (5.0 * temp * 100.0) / 1024
     if estadoLuz:
         estadoLuz='ON'
     else:
         estadoLuz='OFF'
 
-    return render_template("home.html", estadoLuz=estadoLuz, timeStr=timeStr)
+    return render_template("home.html", estadoLuz=estadoLuz, timeStr=timeStr, temp=temp)
 
 
 @app.route('/lights/')
