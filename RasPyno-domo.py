@@ -23,25 +23,14 @@ except:
 
 
 
-
-def toggle_light():
-    try:
-        if ard.digitalRead(led):
-            ard.digitalWrite(led, 0)
-        else:
-            ard.digitalWrite(led, 1)
-
-    except:
-        print("Failed to turn light on")
-    return "Luz"
-
-
-app.jinja_env.globals.update(toggle_light=toggle_light)
-
 @app.route('/')
 def home():
 
-    estadoLuz = ard.digitalRead(led)
+    try:
+        estadoLuz = ard.digitalRead(led)
+    except:
+        estadoLuz = "Debugging"
+        print("derp")
     time = datetime.datetime.now()
     timeStr = time.strftime("%Y-%m-%d %H:%M")
     if estadoLuz:
@@ -54,7 +43,17 @@ def home():
 
 @app.route('/lights/')
 def luces():
-    return render_template("Lights.html")
+    try:
+        estadoLuz = ard.digitalRead(led)
+    except:
+        estadoLuz = False
+        print("derp")
+
+    if estadoLuz:
+        estadoLuz='ON'
+    else:
+        estadoLuz='OFF'
+    return render_template("Lights.html", estadoLuz=estadoLuz)
 
 
 @app.route('/temp/')
@@ -62,6 +61,22 @@ def temp():
     temperatura = 200
     return render_template("temperature.html", temperatura=temperatura)
 
+
+@app.route('/toggle/')
+def toggle_light():
+    print("Eh")
+    try:
+        if ard.digitalRead(led):
+            ard.digitalWrite(led, 0)
+        else:
+            ard.digitalWrite(led, 1)
+
+    except:
+        print("Failed to turn light on")
+    return "Luz"
+
+
+app.jinja_env.globals.update(toggle_light=toggle_light)
 
 #@app.route("/hello/")
 #def hello():
