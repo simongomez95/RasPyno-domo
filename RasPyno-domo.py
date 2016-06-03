@@ -21,7 +21,7 @@ try:
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
 
-    print(ard.analogRead(sensor))
+    print("me encanta el pene" + ard.analogRead(sensor))
 except:
     print("Failed To Connect to Arduino")
 
