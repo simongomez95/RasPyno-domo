@@ -1,5 +1,5 @@
 import datetime
-from flask import Flask, render_template
+from flask import Flask, render_template, Blueprint, Response, request, json
 from time import sleep
 from nanpy import(ArduinoApi, SerialManager)
 
@@ -7,6 +7,7 @@ from nanpy import(ArduinoApi, SerialManager)
 app = Flask(__name__)
 
 led = 13
+sensor = "A2"
 swch = 12
 ledState = False
 swchState = 0
@@ -18,6 +19,7 @@ try:
     # pinMode setup for arduino
     ard.pinMode(led, ard.OUTPUT)
     ard.pinMode(swch, ard.INPUT)
+    ard.pinMode(sensor, ard.INPUT)
 except:
     print("Failed To Connect to Arduino")
 
