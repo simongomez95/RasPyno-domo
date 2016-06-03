@@ -7,7 +7,7 @@ from nanpy import(ArduinoApi, SerialManager)
 app = Flask(__name__)
 
 led = 13
-sensor = "A2"
+sensor = 24
 swch = 12
 ledState = False
 swchState = 0
@@ -23,7 +23,7 @@ try:
     while True:
         temp = ard.analogRead(sensor)
         sleep(0.5)
-        print(temp/9.31)
+        print((5.0 * temp * 100.0) / 1024)
 except:
     print("Failed To Connect to Arduino")
 
