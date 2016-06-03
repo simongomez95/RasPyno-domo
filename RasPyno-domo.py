@@ -20,6 +20,8 @@ try:
     ard.pinMode(led, ard.OUTPUT)
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
+
+    print(ard.analogRead(sensor))
 except:
     print("Failed To Connect to Arduino")
 
