@@ -21,7 +21,8 @@ try:
     ard.pinMode(swch, ard.INPUT)
     ard.pinMode(sensor, ard.INPUT)
 
-    print("me encanta el pene", ard.analogRead(sensor))
+    temp = (5.0 * ard.analogRead(sensor) * 100.0) / 1024
+    print(temp)
 except:
     print("Failed To Connect to Arduino")
 
@@ -62,7 +63,7 @@ def luces():
 
 @app.route('/temp/')
 def temp():
-    temperatura = 200
+    temperatura = (5.0 * ard.analogRead(sensor) * 100.0) / 1024
     return render_template("temperature.html", temperatura=temperatura)
 
 
