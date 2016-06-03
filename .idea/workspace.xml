@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d273c1ef-82f8-439d-8c9a-f05df3ebd88f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RasPyno-domo.py" afterPath="$PROJECT_DIR$/RasPyno-domo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Lights.html" afterPath="$PROJECT_DIR$/templates/Lights.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/temperature.html" afterPath="$PROJECT_DIR$/templates/temperature.html" />
     </list>
     <ignored path="untitled.iws" />
@@ -34,7 +31,7 @@
       <file leaf-file-name="RasPyno-domo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RasPyno-domo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="-325">
               <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -57,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/templates/temperature.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -114,9 +111,9 @@
         <option value="$PROJECT_DIR$/untitled.py" />
         <option value="$PROJECT_DIR$/static/toggle.js" />
         <option value="$PROJECT_DIR$/templates/head.html" />
-        <option value="$PROJECT_DIR$/templates/temperature.html" />
         <option value="$PROJECT_DIR$/templates/Lights.html" />
         <option value="$PROJECT_DIR$/RasPyno-domo.py" />
+        <option value="$PROJECT_DIR$/templates/temperature.html" />
       </list>
     </option>
   </component>
@@ -650,26 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/temperature.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -682,9 +663,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/temperature.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RasPyno-domo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="-325">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
